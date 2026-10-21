@@ -1,0 +1,253 @@
+.destaque {
+    margin-top: 10px;
+}
+
+.manual__layout {
+    padding: 40px 0;
+}
+
+.manual__conteudo {
+    width: 100%;
+}
+
+.titulo-manual__texto {
+    max-width: 90%;
+    margin-bottom: 24px;
+
+    color: var(--color-primary);
+    font-size: 30px;
+    font-weight: bold;
+}
+
+/* Arquivos e publicação — permanecem no topo em qualquer largura */
+.manual__informacoes {
+    display: flex;
+    align-items: stretch;
+    gap: 16px;
+
+    margin-bottom: 36px;
+}
+
+.manual__info-bloco {
+    background-color: var(--color-surface);
+    border-radius: 12px;
+    padding: 16px;
+}
+
+.manual__arquivos {
+    flex: 1;
+}
+
+.manual__publicacao {
+    flex: 0 0 200px;
+}
+
+.manual__info-titulo {
+    margin: 0 0 8px;
+
+    color: var(--color-primary);
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+}
+
+.manual__arquivo-link {
+    display: inline-flex;
+    align-items: baseline;
+    gap: 8px;
+
+    color: var(--color-primary);
+    font-weight: 700;
+    text-decoration: none;
+
+    transition: opacity 0.2s ease;
+}
+
+.manual__arquivo-link:hover,
+.manual__arquivo-link:focus-visible {
+    opacity: 0.75;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
+.manual__arquivo-tamanho,
+.manual__publicacao-data {
+    color: var(--color-primary-light);
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.autores {
+    margin: 30px 0;
+}
+
+.autores__lista {
+    padding-left: 1px;
+}
+
+.autores__item {
+    display: flex;
+    flex-direction: column;
+
+    margin-bottom: 12px;
+    list-style-type: none;
+}
+
+.autores__nome {
+    margin-bottom: -2px;
+    font-weight: bold;
+}
+
+.palavras-chave,
+.resumo,
+.referencias {
+    margin: 40px 0;
+}
+
+/* Referências organizadas por categoria; links destacam-se do texto. */
+.referencias__grupo + .referencias__grupo {
+    margin-top: 28px;
+}
+
+.referencias__grupo-titulo {
+    margin: 0 0 14px;
+    color: var(--color-primary);
+    font-size: clamp(1.05rem, 2vw, 1.25rem);
+    font-weight: 800;
+}
+
+.referencias__lista {
+    display: grid;
+    gap: 12px;
+    list-style: none;
+    counter-reset: bibliografia;
+    margin: 0;
+    padding: 0;
+}
+
+.referencias__item {
+    position: relative;
+    min-width: 0;
+    padding: 18px 18px 18px 54px;
+    border-radius: 10px;
+    background: var(--color-surface);
+    counter-increment: bibliografia;
+}
+
+.referencias__item::before {
+    content: counter(bibliografia, decimal-leading-zero);
+    position: absolute;
+    top: 20px;
+    left: 14px;
+    color: var(--color-primary);
+    font-size: 0.85rem;
+    font-weight: 800;
+}
+
+.referencias__texto {
+    margin: 0;
+    color: var(--color-text);
+    line-height: 1.65;
+    overflow-wrap: anywhere;
+}
+
+.referencias__link {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    margin-top: 10px;
+    color: #1558B0; /* Azul convencional de hyperlink, com contraste no bege */
+    font-weight: 700;
+    line-height: 1.5;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    overflow-wrap: anywhere;
+}
+
+.referencias__link:visited {
+    color: #5C3996;
+}
+
+.referencias__link:hover,
+.referencias__link:focus-visible {
+    color: #0B397B;
+    text-decoration-thickness: 2px;
+}
+
+@media (max-width: 768px) {
+    .manual__layout {
+        padding: 30px 0;
+    }
+
+    .titulo-manual__texto {
+        max-width: 100%;
+        font-size: 26px;
+    }
+
+    .manual__informacoes {
+        flex-direction: column;
+        gap: 12px;
+
+        margin-bottom: 30px;
+    }
+
+    .manual__arquivos,
+    .manual__publicacao {
+        flex: none;
+        width: 100%;
+    }
+
+    .autores__item,
+    .palavras-chave,
+    .resumo,
+    .referencias {
+        font-size: 14px;
+    }
+
+    .palavras-chave__titulo,
+    .resumo__titulo,
+    .referencias__titulo {
+        font-size: 22px;
+    }
+}
+
+@media (max-width: 425px) {
+    .manual__layout {
+        padding: 24px 0;
+    }
+
+    .titulo-manual__texto {
+        font-size: 22px;
+    }
+
+    .manual__info-bloco {
+        padding: 14px;
+    }
+
+    .manual__arquivo-link {
+        flex-wrap: wrap;
+        gap: 4px 8px;
+    }
+
+    .autores__item,
+    .palavras-chave,
+    .resumo,
+    .referencias {
+        font-size: 12px;
+    }
+
+    .palavras-chave__titulo,
+    .resumo__titulo,
+    .referencias__titulo {
+        font-size: 20px;
+    }
+}
+
+/* Ajustes exclusivos dos cards de referência no mobile */
+@media (max-width: 425px) {
+    .referencias__lista { gap: 10px; }
+    .referencias__item { padding: 14px 12px 14px 42px; }
+    .referencias__item::before { left: 10px; top: 16px; font-size: 0.75rem; }
+    .referencias__texto, .referencias__link { font-size: 0.85rem; }
+}

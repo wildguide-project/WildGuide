@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="WildGuide é um manual técnico-científico ilustrado sobre técnicas de contenção física de animais silvestres e exóticos mantidos como pets, voltado a estudantes e profissionais de Medicina Veterinária.">
+
+    <!-- Link Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  
+    <link rel="stylesheet" href="./css/global.css">
+    <link rel="stylesheet" href="./css/header.css">
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/footer.css">
+
+    <link rel="icon" href="assets/images/logo2.png">
+
+    <title>WildGuide | Técnicas de Contenção de Animais Silvestres e Exóticos</title>
+</head>
+<body class="pagina-inicial">
+    <!-- Menu de navegação -->
+    <header id="header"></header>
+    
+    <main>
+        <!-- Hero (Descrição brevia) -->
+        <section class="hero">
+            <div class="container">
+                    <h1>Manual de contenção Física</h1>
+                    <p>
+                        Guia ilustrado e vídeos demonstrativos que ensinam, de forma prática, como 
+                        realizar a contenção segura de animais silvestres e exóticos mantidos como pets.
+                    </p>
+            </div>
+        </section>
+
+        <!-- Slides -->
+        <section class="destaque" aria-label="Conteúdos em destaque">
+            <div class="container">
+                <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                    </div>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="./assets/images/slide1_anhembi.png" class="d-block w-100" alt="Descrição objetiva do conteúdo apresentado">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="./assets/images/slide2.faunare.png" class="d-block w-100" alt="Descrição objetiva do conteúdo apresentado">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="./assets/images/slide2.nafloresta.png" class="d-block w-100" alt="Descrição objetiva do conteúdo apresentado">
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Anterior</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Próximo</span>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Categorias de animais -->
+        <section class="categorias" aria-label="Grupos de animais">
+            <div class="container">
+                <ul>
+                    <li>
+                        <a href="./pages/anfibios.html">
+                            <img src="./assets/icons/sapo-voltado-para-a-direita.png" alt="">
+                            <span>Anfíbios</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./pages/peixes.html">
+                            <img src="./assets/icons/forma-de-peixe-do-pargo.png" alt="">
+                            <span>Peixes</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./pages/aves.html">
+                            <img src="./assets/icons/forma-de-passaro-anis.png" alt="">
+                            <span>Aves</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./pages/mamiferos.html">
+                            <img src="./assets/icons/forma-de-coelho.png" alt="">
+                            <span>Mamíferos</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./pages/repteis.html">
+                            <img src="./assets/icons/serpente.png" alt="">
+                            <span>Répteis</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Apresentação do WildGuide -->
+        <section class="sobre" aria-labelledby="sobre-title">
+            <div class="container">
+                <h2 id="sobre-title">Sobre Wild Guide</h2>
+
+                <p>
+                    O Wild Guide é um manual técnico-científico ilustrado, nascido de um projeto de Iniciação Científica da Universidade Anhembi Morumbi.
+                    Ele reúne em um só lugar informações hoje espalhadas entre livros, artigos e documentos técnicos, e se destina a estudantes e profissionais
+                    de Medicina Veterinária.
+                </p>
+
+                <p>
+                    A contenção física de animais silvestres e exóticos mantidos como pets exige conhecer as particularidades anatômicas, fisiológicas e
+                    comportamentais de cada espécie. Feita de forma inadequada, ela provoca lesões, intensifica o estresse e compromete a segurança do paciente
+                    e do manipulador. Por isso, o manual relaciona cada técnica às características biológicas do animal e combina orientação prática,
+                    fundamentação científica e recursos visuais (fotografias e vídeos demonstrativos na plataforma digital) para consulta rápida e didática.
+                </p>
+
+                <p class="sobre__objetivo">
+                    O objetivo é apoiar a formação acadêmica e a rotina clínica com práticas seguras, que reduzam o estresse e respeitem o bem-estar animal.
+                </p>
+            </div>
+        </section>
+
+        <!-- Como usar este manual -->
+        <section class="como-usar" aria-labelledby="como-usar-title">
+            <div class="container">
+                <div class="como-usar__cabecalho">
+                    <h2 id="como-usar-title">Como usar este manual</h2>
+
+                    <p>
+                        O conteúdo está organizado em cinco grupos taxonômicos: mamíferos, aves, répteis, peixes e anfíbios.
+                        Cada grupo abre com uma regra comum, que vale para todas as suas espécies e não é repetida nas fichas.
+                        Cada espécie tem uma ficha com:
+                    </p>
+                </div>
+
+                <div class="como-usar__grid">
+                    <ul class="como-usar__coluna" aria-label="Estrutura inicial da ficha">
+                        <li class="como-usar__item">
+                            <strong>Conheça a espécie</strong>
+                            <span>classificação, anatomia, comportamento e riscos que mudam a técnica.</span>
+                        </li>
+
+                        <li class="como-usar__item">
+                            <strong>Antes de conter</strong>
+                            <span>o que observar e preparar antes do primeiro contato.</span>
+                        </li>
+
+                        <li class="como-usar__item">
+                            <strong>Técnica principal</strong>
+                            <span>indicação e passo a passo, com a justificativa anatomofisiológica.</span>
+                        </li>
+                    </ul>
+
+                    <ul class="como-usar__coluna" aria-label="Estrutura complementar da ficha">
+                        <li class="como-usar__item">
+                            <strong>Alternativas</strong>
+                            <span>outras técnicas e quando usá-las.</span>
+                        </li>
+
+                        <li class="como-usar__item">
+                            <strong>Nunca faça</strong>
+                            <span>práticas contraindicadas na espécie.</span>
+                        </li>
+
+                        <li class="como-usar__item">
+                            <strong>Interrompa se</strong>
+                            <span>sinais que pedem mudar a técnica ou parar.</span>
+                        </li>
+
+                        <li class="como-usar__item">
+                            <strong>Materiais</strong>
+                            <span>o que deixar pronto, além do que já consta na regra comum do grupo.</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <p class="como-usar__nota">
+                    A técnica principal tem finalidade didática e não é necessariamente a mais adequada para todas as situações.
+                    Adapte sempre a escolha à condição clínica, ao comportamento e ao porte de cada paciente.
+                </p>
+
+                <aside class="como-usar__aviso" role="note" aria-labelledby="aviso-importante-title">
+                    <h3 id="aviso-importante-title">Aviso importante</h3>
+                    <p>
+                        Este material tem finalidade educacional e não substitui o treinamento prático supervisionado, a avaliação individual do paciente
+                        nem o julgamento clínico do médico-veterinário. As imagens e os vídeos da plataforma foram produzidos com aprovação da CEUA-UAM
+                        (Processo nº 24/2026).
+                    </p>
+                </aside>
+            </div>
+        </section>
+
+        <!-- Princípios gerais e limites de aplicação -->
+        <section class="principios" aria-labelledby="principios-title">
+            <div class="container">
+                <div class="principios__cabecalho">
+                    <h2 id="principios-title">Princípios gerais e limites de aplicação</h2>
+                    <p>Cinco princípios orientam toda contenção descrita neste manual:</p>
+                </div>
+
+                <ol class="principios__lista">
+                    <li>
+                        <strong>Menor restrição necessária.</strong>
+                        <span>Use controle suficiente para o procedimento, sem força desnecessária.</span>
+                    </li>
+                    <li>
+                        <strong>Planeje antes de tocar.</strong>
+                        <span>Avalie o estado clínico, o comportamento e o padrão respiratório; prepare o ambiente e os materiais; defina a função de cada pessoa.</span>
+                    </li>
+                    <li>
+                        <strong>Monitore sempre.</strong>
+                        <span>Observe respiração, mucosas e comportamento durante toda a contenção.</span>
+                    </li>
+                    <li>
+                        <strong>Saiba interromper.</strong>
+                        <span>Mudar de técnica ou parar faz parte do manejo seguro. Se a contenção falhar, reorganize em vez de apertar mais.</span>
+                    </li>
+                    <li>
+                        <strong>Seja breve.</strong>
+                        <span>Manipulações curtas reduzem o estresse e os riscos.</span>
+                    </li>
+                </ol>
+
+                <div class="principios__limites">
+                    <p>
+                        Evite compressões que dificultem a ventilação, posições incompatíveis com a anatomia da espécie e manobras que favoreçam traumatismos.
+                        Considere também a segurança da equipe, sobretudo em espécies com mecanismos defensivos capazes de ferir. Animais peçonhentos ou de alto
+                        risco exigem profissionais capacitados, equipamentos e protocolos específicos.
+                    </p>
+
+                    <p>
+                        Quando a contenção física não oferecer condições adequadas de segurança, o médico-veterinário responsável deve avaliar outras estratégias,
+                        como a contenção farmacológica.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Acesso à página da equipe -->
+        <section class="pagina-chamada equipe" aria-labelledby="equipe-title">
+            <div class="container">
+                <h2 id="equipe-title">Equipe</h2>
+                <p>
+                    Conheça as pessoas responsáveis pela pesquisa, elaboração e desenvolvimento do WildGuide,
+                    além das instituições que colaboram com o projeto.
+                </p>
+                <a class="pagina-chamada__cta" href="./pages/equipe.html">Conheça a equipe</a>
+            </div>
+        </section>
+
+        <!-- Acesso à página do manual: mesmo padrão da seção Equipe -->
+        <section class="pagina-chamada manual-chamada" aria-labelledby="manual-chamada-title">
+            <div class="container">
+                <h2 id="manual-chamada-title">Manual</h2>
+                <p>
+                    Conheça o manual técnico-científico, sua proposta, seus autores e as referências
+                    bibliográficas que fundamentam os conteúdos apresentados na plataforma.
+                </p>
+                <a class="pagina-chamada__cta" href="./pages/manual.html">Conheça o manual</a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Rodapé -->
+    <footer id="footer"></footer>
+
+    <!-- JS Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+     
+    <!-- JS -->
+    <script src="./js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,49 @@
+:root {
+  /* BASE (neutros) */
+  --color-text: #3b3b3b;
+  --color-background: #F7F4EA;
+  --color-white: #ffffff;
+  --color-gray: #727272;
+
+  /* BRAND (identidade) */
+  --color-primary: #103523;
+  --color-primary-light: #40584C;
+
+  /* UI (interface) */
+  --color-accent: #DBE096;
+  --color-surface: #f1ebd9;
+
+  /* ALERTAS (contraste AA sobre --color-surface) */
+  --color-danger: #8c2f2f;
+  --color-warning: #7a5a00;
+}
+
+:root {
+    --font-title: 'Playfair Display', serif;
+    --font-subtitle: 'League Spartan', sans-serif;
+    --font-text: 'Inter', sans-serif;
+}
+
+body {
+    margin: 0 auto;
+    background-color: var(--color-background);
+    font-family: var(--font-text);
+}
+
+h1 {
+    font-family: var(--font-title);
+}
+
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--font-subtitle);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-inline: 15px;
+}

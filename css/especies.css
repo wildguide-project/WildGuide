@@ -1,0 +1,618 @@
+body {
+    background-color: var(--color-background);
+}
+
+[hidden] {
+    display: none !important;
+}
+
+/* ==============================
+   GRUPO TAXONÔMICO
+================================ */
+.grupo-especies {
+    padding: 12px 0 28px;
+}
+
+.specie-name {
+    color: var(--color-primary);
+    font-size: clamp(3.5rem, 8vw, 6.25rem);
+    font-weight: 700;
+    line-height: 0.95;
+    margin: 12px 0 22px;
+}
+
+.regras-padrao {
+    max-width: 1160px;
+}
+
+.regras-padrao__titulo {
+    color: var(--color-primary);
+    font-size: 1rem;
+    font-weight: 800;
+    display: inline;
+    margin: 0;
+}
+
+.regras-padrao__titulo::after {
+    content: ". ";
+}
+
+.regras-padrao__texto {
+    display: inline;
+    line-height: 1.65;
+    margin: 0;
+}
+
+.regras-padrao__subtitulo {
+    color: var(--color-text);
+    font-size: 1rem;
+    font-weight: 800;
+    margin: 12px 0 6px;
+}
+
+.regras-padrao__lista {
+    margin: 0;
+    padding-left: 22px;
+    line-height: 1.55;
+    font-size: 0.94rem;
+}
+
+.regras-padrao__lista li + li {
+    margin-top: 5px;
+}
+
+.regras-padrao__lista strong {
+    color: var(--color-text);
+}
+
+/* Menu de animais */
+.animais-menu {
+    background-color: var(--color-surface);
+}
+
+/* Wrapper com setas */
+.animais-menu__wrapper {
+    display: flex;
+    align-items: center;
+    position: relative;
+    gap: 8px;
+}
+
+.animais-menu__lista {
+    display: flex;
+    flex-wrap: nowrap;  
+    overflow-x: auto;         
+    scroll-behavior: smooth;          
+    justify-content: flex-start;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    gap: 20px;
+
+    scrollbar-width: none;       /* Firefox */
+    -ms-overflow-style: none;
+}
+
+.animais-menu__seta {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+
+    background: var(--color-surface);
+    border: 2px solid var(--color-primary);
+    color: var(--color-primary);
+    border-radius: 50%;
+
+    width: 32px;
+    height: 32px;
+    min-width: 32px; 
+
+    font-size: 26px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.animais-menu__lista::-webkit-scrollbar {
+        display: none;
+    }
+
+.animais-menu__seta:hover {
+    background-color: var(--color-primary);
+    color: var(--color-surface);
+}
+
+.animais-menu__item {
+    font-size: 15px;
+    padding: 8px 32px;
+}
+
+
+.animais-menu__item {
+    border: 0;
+    background: transparent;
+    font-family: inherit;
+    color: var(--color-primary);
+    padding: 8px 16px;
+    font-weight: bold;
+    font-size: 18px;
+    white-space: nowrap; /* evita quebra de linha nos itens */
+
+    cursor: pointer;
+    transition: 0.2s ease;
+    border-radius: 20px;
+}
+
+.animais-menu__item:hover,
+.animais-menu__item:focus-visible {
+    background-color: var(--color-primary);
+    color: var(--color-surface);
+}
+
+.animais-menu__item.ativo {
+    background-color: var(--color-primary);
+    color: var(--color-surface);
+}
+
+
+
+/* Dropdown no mesmo estilo do menu do header, sem clipping pelo scroll horizontal. */
+.animais-menu .container {
+    position: relative;
+}
+
+.animais-menu {
+    position: relative;
+    z-index: 5;
+}
+
+.animais-menu__item--dropdown::after {
+    display: inline-block;
+    content: "";
+    margin-left: 9px;
+    vertical-align: 0.18em;
+    border-top: 0.33em solid currentColor;
+    border-right: 0.28em solid transparent;
+    border-left: 0.28em solid transparent;
+}
+
+.animais-menu__submenu {
+    position: absolute;
+    z-index: 20;
+    width: max-content;
+    min-width: 195px;
+    max-width: calc(100% - 16px);
+    margin: 0;
+    padding: 10px 0;
+    list-style: none;
+    background-color: var(--color-white);
+    border: 1px solid rgba(16, 53, 35, 0.12);
+    border-radius: 15px;
+    box-shadow: 0 10px 24px rgba(16, 53, 35, 0.14);
+}
+
+.animais-menu__submenu-item {
+    display: block;
+    width: 100%;
+    padding: 9px 16px;
+    border: none;
+    background: transparent;
+    color: var(--color-primary);
+    font-family: var(--font-text);
+    font-size: 14px;
+    font-weight: 600;
+    text-align: left;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.animais-menu__submenu-item:hover,
+.animais-menu__submenu-item:focus-visible,
+.animais-menu__submenu-item.ativo {
+    color: var(--color-primary);
+    background-color: var(--color-accent);
+}
+
+/* ==============================
+   IDENTIFICAÇÃO DA ESPÉCIE
+================================ */
+.descricao .container {
+    padding-top: clamp(22px, 4vw, 36px);
+    padding-bottom: 16px;
+}
+
+.descricao__nome {
+    color: var(--color-primary);
+    font-family: var(--font-title);
+    font-size: clamp(2.7rem, 6vw, 4rem);
+    font-weight: 700;
+    line-height: 1;
+    margin: 0 0 10px;
+}
+
+.nome-cientifico {
+    color: var(--color-text);
+    font-size: 1rem;
+    margin: 0 0 3px;
+}
+
+.nome-cientifico__valor {
+    color: var(--color-text);
+    font-style: normal;
+    font-weight: 800;
+}
+
+.informacoes-complemento,
+.especies-cobertas {
+    color: var(--color-text);
+    font-size: 0.95rem;
+    margin: 0;
+}
+
+.em-breve {
+    background-color: var(--color-surface);
+    border-radius: 18px;
+    color: var(--color-primary);
+    font-weight: 700;
+    padding: 24px 30px;
+    margin: 18px 0 8px;
+}
+
+/* Regra específica de subgrupo (psitacídeos, testudines, lagartos e serpentes) */
+.regra-subgrupo {
+    margin: 0 0 22px;
+    padding: 18px 20px;
+    background-color: var(--color-surface);
+    border-radius: 12px;
+}
+
+.regra-subgrupo__titulo {
+    margin: 0 0 6px;
+    color: var(--color-primary);
+    font-size: 1rem;
+    font-weight: 900;
+}
+
+.regra-subgrupo__texto,
+.especies-cobertas {
+    margin-bottom: 0;
+    line-height: 1.6;
+}
+
+.especies-cobertas {
+    margin-top: 8px;
+}
+
+.especies-cobertas strong {
+    color: var(--color-text);
+}
+
+/* ==============================
+   VÍDEO
+================================ */
+.video-secao .container {
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.video-secao__moldura {
+    width: 100%;
+    background-color: var(--color-primary);
+    padding: clamp(10px, 1.6vw, 18px);
+}
+
+.video-secao__player {
+    display: block;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    border: 0;
+    background-color: var(--color-primary-light);
+}
+
+/* ==============================
+   CONHEÇA A ESPÉCIE
+================================ */
+.especie-introducao .container {
+    padding-top: 22px;
+    padding-bottom: 30px;
+}
+
+.especie-introducao__titulo,
+.conteudo__subtitulo,
+.alerta__titulo {
+    color: var(--color-primary);
+    font-family: var(--font-subtitle);
+    font-weight: 900;
+}
+
+.especie-introducao__titulo {
+    font-size: 1.15rem;
+    text-transform: uppercase;
+    margin: 0 0 12px;
+}
+
+.especie-introducao__descricao,
+.especie-introducao__antes {
+    max-width: 1120px;
+    font-size: 0.98rem;
+    line-height: 1.65;
+}
+
+.especie-introducao__descricao {
+    margin: 0 0 18px;
+}
+
+.especie-introducao__antes {
+    margin: 0;
+}
+
+.especie-introducao__antes strong {
+    color: var(--color-text);
+}
+
+/* ==============================
+   TÉCNICA E CONTEÚDO DA FICHA
+================================ */
+.conteudo {
+    padding: 8px 0 48px;
+}
+
+.conteudo__tecnica-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    gap: clamp(28px, 5vw, 60px);
+    align-items: start;
+}
+
+.conteudo__apoio {
+    display: grid;
+    gap: 24px;
+}
+
+.pagina-especies .porque {
+    margin-top: 34px;
+    padding: 20px;
+    background-color: var(--color-accent);
+    border-radius: 16px;
+}
+
+body.pagina-especies main strong {
+    font-size: calc(1em + 2px);
+}
+
+.conteudo__subtitulo {
+    font-size: 1.2rem;
+    margin: 0 0 10px;
+}
+
+.conteudo__subtitulo--centralizado {
+    text-align: center;
+}
+
+.tecnica-principal__indicacao,
+.tecnica-principal__observacao,
+.porque__texto,
+.alternativas__texto,
+.materiais__texto {
+    margin: 0;
+    line-height: 1.65;
+}
+
+.tecnica-principal__indicacao strong,
+.porque__texto strong {
+    color: var(--color-primary-light);
+}
+
+.passos {
+    margin: 10px 0 0;
+    padding-left: 24px;
+    line-height: 1.55;
+}
+
+.passos__item + .passos__item {
+    margin-top: 5px;
+}
+
+.passos__titulo {
+    color: var(--color-text);
+}
+
+.tecnica-principal__observacao {
+    margin: 14px 0 0;
+    line-height: 1.65;
+}
+
+/* Alertas: cartões semelhantes ao modelo de referência */
+.conteudo__alertas {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+    margin-top: 34px;
+}
+
+.alerta {
+    min-width: 0;
+    background-color: var(--color-surface);
+    border-radius: 38px;
+    padding: 24px 28px;
+}
+
+.alerta__titulo {
+    color: var(--color-text);
+    font-size: 1.08rem;
+    margin: 0 0 8px;
+}
+
+.alerta__lista {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    line-height: 1.55;
+}
+
+.alerta__lista li {
+    position: relative;
+    padding-left: 20px;
+}
+
+.alerta__lista li + li {
+    margin-top: 3px;
+}
+
+.alerta__lista li::before {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 16px;
+    font-weight: 900;
+}
+
+.alerta--perigo .alerta__lista li::before {
+    content: "×";
+    /* color: var(--color-danger); */
+}
+
+.alerta--atencao .alerta__lista li::before {
+    content: "•";
+    /* color: var(--color-warning); */
+}
+
+.materiais {
+    margin-top: 28px;
+}
+
+.materiais .conteudo__subtitulo {
+    color: var(--color-text);
+    margin-bottom: 3px;
+}
+
+/* ==============================
+   RESPONSIVIDADE
+================================ */
+@media (max-width: 900px) {
+    .grupo-especies {
+        padding-bottom: 22px;
+    }
+
+    .regras-padrao__lista {
+        font-size: 0.9rem;
+    }
+
+    .conteudo__tecnica-grid {
+        grid-template-columns: 1fr;
+        gap: 26px;
+    }
+
+    .conteudo__apoio {
+        gap: 22px;
+    }
+
+    .porque {
+        margin-top: 0;
+    }
+
+    .conteudo__subtitulo--centralizado {
+        text-align: left;
+    }
+}
+
+@media (max-width: 768px) {
+    .grupo-especies {
+        padding-top: 8px;
+    }
+
+    .regras-padrao__titulo,
+    .regras-padrao__texto {
+        display: block;
+    }
+
+    .regras-padrao__titulo {
+        margin-bottom: 5px;
+    }
+
+    .regras-padrao__titulo::after {
+        content: "";
+    }
+
+    .regras-padrao__lista {
+        padding-left: 20px;
+    }
+
+    .descricao .container {
+        padding-bottom: 14px;
+    }
+
+    .video-secao .container {
+        padding-inline: 0;
+    }
+
+    .video-secao__moldura {
+        padding: 9px;
+    }
+
+    .especie-introducao .container {
+        padding-top: 20px;
+        padding-bottom: 24px;
+    }
+
+    .conteudo {
+        padding-top: 4px;
+        padding-bottom: 36px;
+    }
+
+    .conteudo__alertas {
+        grid-template-columns: 1fr;
+        margin-top: 28px;
+    }
+
+    .alerta {
+        border-radius: 26px;
+        padding: 22px 20px;
+    }
+
+    .pagina-especies .porque {
+        margin-top: 0px;
+        margin-bottom: 18px ;
+    }
+}
+
+@media (max-width: 425px) {
+    .specie-name {
+        font-size: 50px;
+        margin-bottom: 16px;
+        
+    }
+
+    .regras-padrao__texto,
+    .regras-padrao__lista,
+    .especie-introducao__descricao,
+    .especie-introducao__antes,
+    .tecnica-principal__indicacao,
+    .tecnica-principal__observacao,
+    .porque__texto,
+    .alternativas__texto,
+    .materiais__texto,
+    .passos,
+    .alerta__lista {
+        font-size: 0.9rem;
+    }
+
+    .descricao__nome {
+        font-size: clamp(2.35rem, 14vw, 3.3rem);
+    }
+
+    .nome-cientifico,
+    .informacoes-complemento,
+.especies-cobertas {
+        font-size: 0.88rem;
+    }
+
+    .especie-introducao__titulo,
+    .conteudo__subtitulo {
+        font-size: 1.05rem;
+    }
+
+    .alerta {
+        border-radius: 22px;
+    }
+}

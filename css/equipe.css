@@ -1,0 +1,255 @@
+body {
+    background-color: var(--color-background);
+}
+
+/* Equipe */
+.hero-equipe {
+    background-color: var(--color-surface);
+}
+
+.hero-equipe .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    padding: 60px 10px;
+}
+
+.hero-equipe h1 {
+    font-size: 90px;
+    font-family: var(--font-title);
+    font-weight: 900;
+    color: var(--color-primary)
+}
+
+/* Realização */
+.realizacao,
+.desenvolvedor {
+    margin-top: 10px;
+    padding: 30px 0;
+}
+
+.realizacao h2,
+.orientacao h2,
+.colaboracao h2,
+.desenvolvedor h2 {
+    margin-bottom: 18px;
+}
+
+.realizacao__lista,
+.orientacao__lista,
+.colaboracao__lista,
+.desenvolvedor__lista {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.realizacao__lista li,
+.orientacao__lista li,
+.colaboracao__lista li,
+.desenvolvedor__lista li {
+    display: flex;
+    justify-content: space-between;
+}
+
+.realizacao__curriculo,
+.orientacao__curriculo,
+.desenvolvedor__curriculo,
+.colaboracao__nome {
+    flex: 0 0 40%;
+    margin-bottom: 8px;
+}
+
+.realizacao__nome,
+.orientacao__nome,
+.desenvolvedor__nome {
+    display: block;
+}
+
+.curriculo-link {
+    color: var(--color-text);
+    text-decoration: none;
+}
+
+.curriculo-link:hover .realizacao__nome,
+.curriculo-link:hover .orientacao__nome,
+.curriculo-link:hover .desenvolvedor__nome,
+.curriculo-link:focus-visible .realizacao__nome,
+.curriculo-link:focus-visible .desenvolvedor__nome,
+.curriculo-link:focus-visible .orientacao__nome {
+    color: var(--color-primary);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
+.curriculo-link__hint {
+    display: block;
+    margin-top: 2px;
+
+    color: var(--color-primary-light);
+    font-size: 11px;
+    font-weight: 600;
+    opacity: 0.8;
+}
+
+.realizacao__descricao,
+.orientacao__descricao,
+.desenvolvedor__descricao {
+    flex: 0 0 55%;
+    
+}
+
+/* Específico de cada um */
+.realizacao__descricao,
+.desenvolvedor__descricao {
+    flex: 0 0 45%;
+    max-width: 900px;
+    text-align: justify;
+}
+
+.orientacao__descricao {
+    flex: 0 0 45%;
+    max-width: 900px;
+    margin-bottom: 24px;
+    text-align: justify;
+}
+
+/* Orientação / Colaboração*/
+.orientacao,
+.colaboracao {
+    margin-top: 10px;
+    padding: 10px 0;
+}
+
+.orientacao__descricao {
+    flex: 0 0 45%;
+}
+
+/* Instituições */
+.instituicoes {
+    margin-top: 40px;
+}
+
+.instituicoes__container {
+    display: flex;
+}
+
+.instituicoes__card {
+
+    display: flex;          
+    align-items: center;    
+    gap: 12px;              
+
+    background-color: var(--color-surface);
+    margin: 20px 30px 20px 0;
+    padding: 10px 60px 10px 10px;
+    border-radius: 30px;
+}
+
+.instituicoes__logo {
+    background-color: var(--color-accent);
+    border-radius: 50%;
+
+    height: 38px;
+    width: 38px;
+    min-width: 38px;
+
+    object-fit: contain;
+    padding: 6px;
+}
+
+
+.instituicoes__link {
+    text-decoration: none;
+    color: var(--color-text);
+    font-weight: 700;
+}
+
+.instituicoes__nome {
+    padding-left: 8px;
+}
+
+
+@media (max-width: 1024px) {
+    .realizacao__descricao,
+    .orientacao__descricao,
+    .desenvolvedor__descricao {
+        flex: 0 0 50%; 
+        
+    }
+}
+
+@media (max-width: 768px) {
+    .realizacao .realizacao__lista { font-size: 14px; }
+
+    .orientacao .orientacao__lista { font-size: 14px; }
+
+    .desenvolvedor .desenvolvedor__lista { font-size: 14px; }
+    
+    .realizacao__curriculo,
+    .orientacao__curriculo,
+    .desenvolvedor__curriculo,
+    .colaboracao__nome {margin: 12px 0 2px; font-weight: bold;}
+    
+    
+    .realizacao__lista li,
+    .orientacao__lista li,
+    .desenvolvedor__lista li { display: flex; flex-direction: column; }
+
+    .realizacao__curriculo,
+    .orientacao__curriculo,
+    .desenvolvedor__curriculo,
+    .realizacao__descricao,
+    .orientacao__descricao,
+    .desenvolvedor__descricao {
+        flex: none;
+        width: 100%;
+    }
+
+    .instituicoes__container { display: flex; flex-direction: column; }
+    .instituicoes__card { margin-bottom: 5px; }
+}
+
+@media (max-width: 425px) {
+
+    .hero-equipe h1 { font-size: 70px }
+
+    .realizacao h2 {margin-bottom: -6px; font-size: 22px;}
+    .orientacao h2, .colaboracao h2, .desenvolvedor h2 { margin-bottom: 10px; font-size: 22px;}  
+    .instituicoes h2 { margin-bottom: 12px;} 
+
+    .realizacao .realizacao__lista,
+    .desenvolvedor .desenvolvedor__lista { font-size: 12px; }
+    .realizacao__curriculo {margin: 26px 0 2px; }
+
+    .realizacao__lista li,
+    .orientacao__lista li { display: flex; flex-direction: column; }
+
+    .orientacao .orientacao__lista { font-size: 12px; }
+
+    .instituicoes .instituicoes__card {
+        gap: 2px;  
+
+        margin: 20px 16px 5px 0;
+        padding: 10px 26px 10px 10px;
+        border-radius: 30px;
+    }
+    .instituicoes .instituicoes__link {width: 150px;}
+    .instituicoes .instituicoes__logo {
+        height: 32px;
+        width: 32px;
+        min-width: 32px;
+    }
+    .instituicoes .instituicoes__nome { font-size: 12px; padding-left: 2px}
+    
+}
+/* A instituição da seção Colaboração ocupa uma linha no mobile. */
+.colaboracao__lista li { display: block; }
+.colaboracao__nome {
+    display: inline-block;
+    flex: none;
+    max-width: 100%;
+    white-space: nowrap;
+    font-size: clamp(0.7rem, 3.2vw, 1rem);
+}
